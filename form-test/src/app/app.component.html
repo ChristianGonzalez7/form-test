@@ -32,7 +32,16 @@
   <input class="politica-privacidad" type="checkbox" name="suscribirse">Suscríbeme al blog
 </div>
 
-<button id="boton-descarga">Descargar</button>
+<button  id="boton-descarga" (click)="popup()">Descargar
+</button>
+
+<div id="myModal" class="modal" *ngIf="popupVisibility">
+  <div id="modal-content">
+    <span id="close" (click)="popup()">&times;</span>
+    <p id="modal-text">Gracias por descargar!</p>
+  </div>
+</div>
+
 
 <footer>
   <div id="flex-padre">
